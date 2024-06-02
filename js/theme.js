@@ -3,12 +3,13 @@
     function crearte() {
         
         const vse = document.getElementById("everything");
+        vse.setAttribute('data-theme', localStorage.getItem('theme'));
         if (vse.getAttribute('data-theme') != 'light' && vse.getAttribute('data-theme') != 'dark'){
             var targetTheme = 'light';
             vse.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
         }
-        vse.setAttribute('data-theme', localStorage.getItem('theme'));
+        
         let l = document.getElementById("sunANDmoon");
         l.addEventListener('click', theme);
         if (vse.getAttribute('data-theme') == 'light') {

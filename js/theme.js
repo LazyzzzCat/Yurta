@@ -1,7 +1,13 @@
 (function () {
     addEventListener('load', crearte);
     function crearte() {
+        
         const vse = document.getElementById("everything");
+        if (vse.getAttribute('data-theme') != 'light' && vse.getAttribute('data-theme') != 'dark'){
+            var targetTheme = 'light';
+            vse.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
         vse.setAttribute('data-theme', localStorage.getItem('theme'));
         let l = document.getElementById("sunANDmoon");
         l.addEventListener('click', theme);

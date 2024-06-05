@@ -1,21 +1,23 @@
 [data-theme="light"] {
-  --bg-color: rgb(255, 248, 230);
-  --text: rgb(24, 24, 24);
+  --bg-color: #fff8e6;
+  --text: #181818;
   --ele-text: rgba(0, 0, 0, 0.312);
   --box-shadow: inset 0 0 5rem rgb(110, 110, 110);
   --text-shadow: 0 .05rem .1rem rgb(0, 0, 0);
   --svg: rgb(255, 60, 0);
-  --card: rgb(228, 223, 210);
+  --card: #fffcf4 ;
+  /* --car:#C5A47D; */
 }
 
 [data-theme="dark"] {
-  --bg-color: rgb(33, 37, 41);
+  --bg-color: #1d1f20;
   --text: rgb(255, 255, 255);
   --ele-text: rgba(255, 255, 255, 0.507);
   --box-shadow: inset 0 0 5rem rgb(0, 0, 0);
   --text-shadow: 0 .05rem .1rem rgba(255, 255, 255, 0.638);
   --svg: rgb(0, 60, 255);
-  --card: rgb(56, 63, 70);
+  --card: #949698 ;
+  /* --car:#0B131B; */
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -29,8 +31,11 @@
 
 
 
-a {
-  color: var(--text);
+a,button {
+  color: var(--bg-color);
+  background-color: var(--bg-color);
+  border: none;
+  text-shadow: var(--text-shadow);
 }
 
 footer p {
@@ -56,6 +61,7 @@ footer p a {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+
 }
 
 .cover-container {
@@ -90,7 +96,7 @@ footer p a {
 }
 
 
-svg{
+#sunANDmoon{
   position: absolute;
   right: 2%;
   bottom: 2%;
@@ -98,13 +104,11 @@ svg{
  
 }
 
-svg:hover{
+#sunANDmoon:hover,#sunANDmoon:active{
   fill: var(--svg);
   
 }
-.card{
-  
-}
+
 img{
   border:1px solid var(--text);
   border-radius: 20px;
@@ -115,20 +119,36 @@ img{
   border-radius: 20px;
   width: 300px;
   height: 550px;
-  background-color: var(--card);
+  background-color: var(--car);
+}
+.card a{
+  color: var(--bg-color);
 }
 .btn{
   font-size: 30px;
   color: var(--bg-color);
 }
-.btn:hover{
+.btn:hover,.btn:active{
   color: var(--text);
 }
 #knopochka {
   color: var(--bg-color);
   font-size: 50px;
 }
-#knopochka:hover {
+#knopochka:hover,#knopochka:active{
   color: var(--text);
   font-size: 50px;
+}
+
+#a_rnd_title,#a_rnd_next{
+  display: none;
+  
+}
+#a_rnd{
+  font-size: 24px;
+}
+#c{
+  max-width: 100%;  
+  width: 100vw;     
+  height: auto;     
 }

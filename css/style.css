@@ -152,7 +152,7 @@ img{
 }
 @media (max-width: 480px) {
   #c{   
-    width: 50vw;
+    width: auto;
     height: auto;     
   }
 }

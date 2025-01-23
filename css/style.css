@@ -150,3 +150,8 @@ img{
 #c{   
   height: 50vh;     
 }
+@media (max-width: 480px) {
+  #c{   
+    width: 50vw;     
+  }
+}
